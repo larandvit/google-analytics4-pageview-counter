@@ -21,7 +21,7 @@ The sample content is.
 
 ## Generate Google Analytics token usage
 
-```text
+```
 usage: generate_page_views_analytics4.py [-h] -p PROPERTY_ID -o OUTPUT_PATH
 
 Generate Google Analytics 4 page view report file v. 1.0.0
@@ -37,7 +37,7 @@ optional arguments:
 Sample of usage in Alpine Linux where the tool and service account file located in `/opt/generate_page_views_analytics4` folder and web site in `/var/www/sample.com` folder.
 
 
-```bash
+```console
 export GOOGLE_APPLICATION_CREDENTIALS="/opt/generate_page_views_analytics4/tech-jogging-blog-58s414ae632b.json"
 python3 /opt/generate_page_views_analytics4/generate_page_views_analytics4.py -p 123456789 -o /var/www/sample.com/blog_metrics.js
 ``` 
@@ -48,9 +48,9 @@ python3 /opt/generate_page_views_analytics4/generate_page_views_analytics4.py -p
 
 2. Install Python library
 
-```bash
-pip install google-analytics-data
-```
+   ````console
+   pip install google-analytics-data
+   ```
 
 ## How to run it in sample mode
 
@@ -84,38 +84,38 @@ pip install google-analytics-data
 
 1. Switch to root account if needed.
 
-```bash
-sudo su
-```
+   ```console
+   sudo su
+   ```
 
 2. Open `crontab` editor.
 
-```bash
-crontab -e
-```
+   ```console
+   crontab -e
+   ```
 
 3. Add the command item.
 
-It runs cron job once an hour. Based on my experience, Google Analytics 4 database is updated daily.  
+   It runs cron job once an hour. Based on my experience, Google Analytics 4 database is updated daily.  
 
-```
-0 * * * * python3 /opt/generate_page_views_analytics4/launcher.sh
-```
+   ```
+   0 * * * * python3 /opt/generate_page_views_analytics4/launcher.sh
+   ```
 
-`launcher.sh` is located in `/opt/generate_page_views_analytics4` folder and encapsulate the logic to run the process.
+   `launcher.sh` is located in `/opt/generate_page_views_analytics4` folder and encapsulate the logic to run the process.
 
-```
-export GOOGLE_APPLICATION_CREDENTIALS="/opt/generate_page_views_analytics4/[key file].json"
-python3 /opt/generate_page_views_analytics4/generate_page_views_analytics4.py -p [property_id] -o /var/www/sample.com/blog_metrics.js
-```
+   ```console
+   export GOOGLE_APPLICATION_CREDENTIALS="/opt/generate_page_views_analytics4/[key file].json"
+   python3 /opt/generate_page_views_analytics4/generate_page_views_analytics4.py -p [property_id] -o /var/www/sample.com/blog_metrics.js
+   ```
 
 4. Validate your setup.
 
-```bash
-crontab -l
-```
+   ```console
+   crontab -l
+   ```
 
 ## Documentation
 
 [API Quickstart](https://developers.google.com/analytics/devguides/reporting/data/v1/quickstart-client-libraries)
-  
+ 
