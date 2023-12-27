@@ -96,8 +96,10 @@ crontab -e
 
 3. Add the command item.
 
+It runs cron job once an hour. Based on my experience, Google Analytics 4 database is updated daily.  
+
 ```
-* * * * * python3 /opt/generate_page_views_analytics4/launcher.sh
+0 * * * * python3 /opt/generate_page_views_analytics4/launcher.sh
 ```
 
 `launcher.sh` is located in `/opt/generate_page_views_analytics4` folder and encapsulate the logic to run the process.
