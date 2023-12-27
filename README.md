@@ -48,7 +48,7 @@ python3 /opt/generate_page_views_analytics4/generate_page_views_analytics4.py -p
 
 2. Install Python library
 
-   ````console
+   ```console
    pip install google-analytics-data
    ```
 
