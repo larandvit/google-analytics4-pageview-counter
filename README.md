@@ -1,25 +1,28 @@
-# Google Analytics 4 Page Views Counter
+# Google Analytics 4 and Google Universal Analytics Page Views Counter
 
 ## Description
 
-The repository is a sample on how to implement Google Analytics 4 in static web site. Google Analytics 4 reduces options to do it 
-comparing with Google Universal Analytics. 
+The repository is a sample on how to implement Google Analytics 4 and Google Universal Analytics in static web site.  
 
-The main idea is to generate a report with page views in Python Google Analytics library on schedule and store it in a javascript file as a variable.   
+The main idea of Google Analytics 4 is to generate a report with page views in Python Google Analytics library on schedule and store it in a javascript file as a variable.
+
+Google Universal Analytics was retired on Jul 1, 2024. If you was able to export your report with page URLs and counters, you can add it to your Web site. The exported data should be converted into Map constant.
 
 The sample content is.
 
 1. show_pageviews.html - shows pageviews counter.
 
-2. pageviews.js - retrieve stored Google Analytics 4 report from a javascript file.
+2. pageviews.js - retrieve stored Google Analytics 4 and Universal Analytics reports from javascript files.
 
 3. blog_metrics.js - Google Analytics 4 report data.
 
-4. generate_page_views_analytics4.py - a tool to generate Google Analytics 4 report data on schedule.
+4. blog_metrics_universal_analytics.js - Google Universal Analytics report data.
 
-5. [key file].json - service account key JSON file .
+5. generate_page_views_analytics4.py - a tool to generate Google Analytics 4 report data on schedule.
 
-## Generate Google Analytics token usage
+6. [key file].json - service account key JSON file for Google Analytics 4.
+
+## Generate Google Analytics 4 token usage
 
 ```
 usage: generate_page_views_analytics4.py [-h] -p PROPERTY_ID -o OUTPUT_PATH
